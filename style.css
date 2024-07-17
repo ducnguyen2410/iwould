@@ -115,51 +115,52 @@ body {
 .block-1 {
   top: 30%;
   left: 60%;
-  background: url("https://i.pinimg.com/736x/c0/66/78/c066789311c873ac7a164d656d5911ae.jpg") no-repeat 50% 50%;
+  background: url("./images/img2.png") no-repeat 50% 50%;
   background-size: cover;
 }
 
 .block-2 {
   top: 20%;
   left: 25%;
-  background: url("https://i.pinimg.com/736x/d5/d2/80/d5d280e7288fd99216a0dccf2d6be75f.jpg") no-repeat 50% 50%;
+  background: url("./images/img3.png") no-repeat 50% 50%;
   background-size: cover;
 }
 
 .block-3 {
   top: 50%;
   left: 10%;
-  background: url("https://i.pinimg.com/736x/a2/62/61/a2626130520e1cd2d54dd4de298adfb3.jpg") no-repeat 50% 50%;
+  background: url("./images/img4.png") no-repeat 50% 50%;
   background-size: cover;
 }
 .block-4 {
   top: 60%;
   left: 40%;
-  background: url("https://i.pinimg.com/736x/95/31/a6/9531a6a9ce324ab25d664dbe8325a607.jpg") no-repeat 50% 50%;
+  background: url("./images/img9.png") no-repeat 50% 50%;
   background-size: cover;
 }
 .block-5 {
+  width: 200px;
   top: 30%;
   left: 30%;
-  background: url("https://i.pinimg.com/736x/f4/fd/23/f4fd23aec0724e5a11982adecd39ea14.jpg") no-repeat 50% 50%;
+  background: url("./images/img10.png") no-repeat 50% 50%;
   background-size: cover;
 }
 .block-6 {
   top: 60%;
   left: 60%;
-  background: url("https://i.pinimg.com/736x/7d/01/3e/7d013e729d94ae5353ac3cd5acaee8bd.jpg") no-repeat 50% 50%;
+  background: url("./images/img11.jfif") no-repeat 50% 50%;
   background-size: cover;
 }
 .block-7 {
   top: 20%;
   left: 50%;
-  background: url("https://i.pinimg.com/736x/ed/cb/b0/edcbb078816a591f7b117ef551ab97d6.jpg") no-repeat 50% 50%;
+  background: url("./images/img12.jfif") no-repeat 50% 50%;
   background-size: cover;
 }
 .block-8 {
   top: 60%;
   left: 10%;
-  background: url("https://i.pinimg.com/736x/9e/8c/0e/9e8c0e333ec2e13c35b82a2b323846ee.jpg") no-repeat 50% 50%;
+  background: url("./images/img13.jfif") no-repeat 50% 50%;
   background-size: cover;
 }
 .block-9 {
@@ -182,7 +183,7 @@ body {
 }
 .block-12 {
   top: 60%;
-  left: 65%;
+  left: 55%;
   background: url("https://i.pinimg.com/736x/bb/02/b7/bb02b743a7bfaf7de4dec54cec5fc416.jpg") no-repeat 50% 50%;
   background-size: cover;
 }
