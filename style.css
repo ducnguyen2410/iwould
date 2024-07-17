@@ -51,6 +51,7 @@ body {
 }
 
 .intro span:nth-child(1) {
+  text-align: center;
   letter-spacing: 5px;
   color: #F7FFF7;
   font-size: 4em;
