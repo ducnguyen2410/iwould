@@ -7,15 +7,32 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="shortcut icon" href="./images/logo.jfif" type="image/x-icon">
+    <link rel="shortcut icon" href="./images/logo.jfif" type="image/x-icon" />
     <link
       href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
       rel="stylesheet"
     />
-    
+
     <title>$WIN</title>
   </head>
   <body>
+    <div class="container">
+      <div class="gallery">
+        <div class="block block-1"></div>
+        <div class="block block-2"></div>
+        <div class="block block-3"></div>
+        <div class="block block-4"></div>
+        <div class="block block-5"></div>
+        <div class="block block-6"></div>
+        <div class="block block-7"></div>
+        <div class="block block-8"></div>
+        <div class="block block-9"></div>
+        <div class="block block-10"></div>
+        <div class="block block-11"></div>
+        <div class="block block-13"></div>
+        <div class="block block-15"></div>
+      </div>
+    </div>
     <div class="navbar">
       <div class="intro">
         <span>Nah I'd Win</span>
@@ -46,25 +63,6 @@
         <span>CA: Coming soon!</span>
       </div>
     </div>
-    <div class="container">
-      <div class="gallery">
-        <div class="block block-1"></div>
-        <div class="block block-2"></div>
-        <div class="block block-3"></div>
-        <div class="block block-4"></div>
-        <div class="block block-5"></div>
-        <div class="block block-6"></div>
-        <div class="block block-7"></div>
-        <div class="block block-8"></div>
-        <div class="block block-9"></div>
-        <div class="block block-10"></div>
-        <div class="block block-11"></div>
-        <div class="block block-12"></div>
-        <div class="block block-13"></div>
-        <div class="block block-14"></div>
-        <div class="block block-15"></div>
-      </div>
-    </div>
     <script>
       let blocks = document.querySelectorAll(".block");
       let duration = 0.25;
@@ -83,24 +81,17 @@
         },
       });
 
-      document.addEventListener("DOMContentLoaded", (event) => {
-        const video = document.getElementById("myVideo");
+      document.addEventListener('DOMContentLoaded', (event) => {
+            const audio = new Audio('./images/IMG_5448.MP4');
+            audio.loop = true;
+            const playButton = document.querySelector('body');
 
-        const observer = new IntersectionObserver(
-          (entries) => {
-            entries.forEach((entry) => {
-              if (entry.isIntersecting) {
-                video.play();
-              } else {
-                video.pause();
-              }
+            playButton.addEventListener('click', () => {
+                audio.play().catch(error => {
+                    console.error('Error playing audio:', error);
+                });
             });
-          },
-          { threshold: 0.5 }
-        );
-
-        observer.observe(video);
-      });
+        });
     </script>
   </body>
 </html>
