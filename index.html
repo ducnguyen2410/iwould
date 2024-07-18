@@ -16,6 +16,14 @@
     <title>$WIN</title>
   </head>
   <body>
+    <div class="click-here">
+      <span>Would you fight for your dream ?</span>
+      <span class="click-el">Click here if you are willing to</span>
+    </div>
+    <video width="320" height="240">
+      <source src="./images/202407181739 (1).mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
     <div class="container">
       <div class="gallery">
         <div class="block block-1"></div>
@@ -64,6 +72,12 @@
       </div>
     </div>
     <script>
+      const clickHere = document.querySelector(".click-here");
+      const container = document.querySelector(".gallery");
+      const navbar = document.querySelector(".navbar");
+      const clickEl = document.querySelector(".click-el");
+      const body = document.querySelector("body");
+      const videoCon = document.querySelector("video");
       let blocks = document.querySelectorAll(".block");
       let duration = 0.25;
       let stagger = duration;
@@ -81,17 +95,27 @@
         },
       });
 
-      document.addEventListener('DOMContentLoaded', (event) => {
-            const audio = new Audio('./images/IMG_5448.MP4');
-            audio.loop = true;
-            const playButton = document.querySelector('body');
-
-            playButton.addEventListener('click', () => {
-                audio.play().catch(error => {
-                    console.error('Error playing audio:', error);
-                });
-            });
+      clickEl.addEventListener("click", () => {
+        clickHere.style.opacity = 0;
+        clickHere.style.display = "none";
+        setTimeout(() => {
+          videoCon.style.display = "block";
+        }, 500);
+        setTimeout(() => {
+          videoCon.play();
+        }, 1000);
+        videoCon.addEventListener("ended", () => {
+          setTimeout(() => {
+            videoCon.remove();
+            container.style.display = "block";
+            navbar.style.display = "flex";
+            container.style.opacity = 1;
+            navbar.style.opacity = 1;
+            body.style.backgroundImage = "url(./images/background.jfif)";
+            body.style.backgroundColor = "";
+          }, 800);
         });
+      });
     </script>
   </body>
 </html>

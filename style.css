@@ -1,4 +1,5 @@
 * {
+  width: 100vw;
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -8,14 +9,27 @@
 body {
   height: 100vh;
   overflow: auto;
-  background-image: url("./images/background.jpg");
+  background-color: black;
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: cover;
+  background-size: contain;
   background-attachment: fixed;
   display: flex;
   flex-direction: column;
   position: relative;
+  z-index: 1; /* Adjusted z-index */
+  color: white; /* Ensure text remains visible */
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: -1;
 }
 
 .collections {
@@ -33,11 +47,11 @@ body {
 }
 
 .navbar {
+  display: flex;
   margin-top: 130vh;
   padding-bottom: 200px;
   width: 100vw;
   z-index: 111;
-  display: flex;
   flex-direction: column;
   gap: 50px;
   align-items: center;
@@ -54,24 +68,27 @@ body {
 .intro span:nth-child(1) {
   text-align: center;
   letter-spacing: 5px;
-  color: #F7FFF7;
+  color: white;
   font-size: 4em;
 }
 
 .intro span:nth-child(2) {
   letter-spacing: 3px;
-  color: #F7FFF7;
+  color: white;
   font-size: 2em;
+  text-align: center;
 }
 
 .navbar-socials {
   flex-direction: row;
   align-items: center;
+  justify-content: center;
   gap: 50px;
   display: flex;
 }
 
 .navbar-socials a {
+  width: 70px;
   text-decoration: none;
 }
 
@@ -100,6 +117,8 @@ body {
 }
 
 .ca span {
+  color: black;
+  text-align: center;
   font-size: 1.3em;
   font-weight: 600;
 }
@@ -125,6 +144,10 @@ body {
   left: 25%;
   background: url("./images/img3.png") no-repeat 50% 50%;
   background-size: cover;
+}
+
+.click-here span {
+  text-align: center;
 }
 
 .block-3 {
@@ -229,8 +252,58 @@ body {
   margin: 100px auto;
 }
 
+.click-here {
+  opacity: 1;
+  transition: opacity 2s;
+  background-color: black;
+  height: 100vh;
+  display: block;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+video {
+  width: 100vw;
+  height: 100vh;
+  display: none;
+}
+
+.click-here span:nth-child(1){
+  color: white;
+  font-size: 3.5em;
+  font-weight: 600;
+}
+
+.click-here span:nth-child(2) {
+  cursor: pointer;
+  color: #FF6B6B;
+  font-size: 1.5em;
+  font-weight: 500;
+}
+
+.gallery, .navbar {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.navbar {
+  display: none;
+}
+
 @media only screen and (max-device-width:600px) {
   .gallery {
-    display: none;
+    display: none !important;
+  }
+
+  .navbar-socials a, .navbar-socials a img {
+    width: 50px;
+  }
+
+  .navbar-socials {
+    justify-content: center;
   }
 }
