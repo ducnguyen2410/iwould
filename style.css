@@ -22,6 +22,10 @@ body {
   transition: background-image 1.5s;
 }
 
+.hello {
+  display: flex;
+}
+
 body::before {
   content: "";
   position: fixed;
