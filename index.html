@@ -45,6 +45,10 @@
       <div class="intro">
         <span>Nah I'd Win</span>
         <span>How could I not ?</span>
+        <span
+          >You've made a fortune from shitcoins, but would you sell? Nah, I'd
+          hold.</span
+        >
       </div>
       <div class="navbar-socials">
         <a href="https://t.me/mustwinsol" target="_blank">
@@ -97,23 +101,30 @@
 
       clickEl.addEventListener("click", () => {
         clickHere.style.opacity = 0;
-        clickHere.style.display = "none";
         setTimeout(() => {
+          clickHere.style.display = "none";
           videoCon.style.display = "block";
+          videoCon.style.opacity = 1;
         }, 500);
         setTimeout(() => {
           videoCon.play();
         }, 1000);
         videoCon.addEventListener("ended", () => {
+          videoCon.remove();
+          container.style.display = "block";
+          navbar.style.display = "flex";
           setTimeout(() => {
-            videoCon.remove();
-            container.style.display = "block";
-            navbar.style.display = "flex";
-            container.style.opacity = 1;
-            navbar.style.opacity = 1;
-            body.style.backgroundImage = "url(./images/background.jfif)";
-            body.style.backgroundColor = "";
-          }, 800);
+            const audio = new Audio(
+              "./images/WarningSpedUp-MCORSEN-8918053.mp3"
+            );
+            audio.play();
+            setTimeout(() => {
+              container.style.opacity = 1;
+              navbar.style.opacity = 1;
+              body.style.backgroundImage = "url(./images/background.jfif)";
+              body.style.backgroundColor = "";
+            }, 1000);
+          }, 1000);
         });
       });
     </script>
