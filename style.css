@@ -52,6 +52,7 @@ body::before {
 }
 
 .navbar {
+  position: absolute;
   display: flex;
   margin-top: 130vh;
   padding-bottom: 200px;
